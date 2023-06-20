@@ -9,4 +9,23 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  
+  {
+    "Shatur/neovim-ayu", 
+    name = "ayu",
+    config = function ()
+      require("ayu").setup {
+        mirage = false,
+        overrides = {},
+      }
+    end,
+  },
+  {
+    "neoclide/coc.nvim", 
+    build = "yarn install --frozen-lockfile",
+    branch = "master",
+    enabled = true,
+    lazy = false,
+  },
+
 }
